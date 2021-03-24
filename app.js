@@ -293,6 +293,9 @@ app.get("/maps",(req,res)=>{
   res.render("map")
 });
 
+app.get("/fitness", function(req, res) {
+  res.render("fitness");
+})
 
 let port = process.env.PORT;
 if(port == null || port == ""){
