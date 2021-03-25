@@ -295,6 +295,22 @@ app.get("/maps",(req,res)=>{
 
 app.get("/fitness", function(req, res) {
   res.render("fitness");
+});
+
+app.post("/fitness", function(req, res){
+  const name = req.body.name;
+  const bmi = parseInt(req.body.bmi);
+  const workout = parseInt(req.body.workout);
+  const yoga = parseInt(req.body.yoga);
+  const heartbeat = parseInt(req.body.heartbeat);
+  const bp = parseInt(req.body.bp);
+  const medication = parseInt(req.body.medication);
+  const covid = parseInt(req.body.covid);
+  const lungs = parseInt(req.body.lungs);
+  const pulse = parseInt(req.body.pulse);
+  const temp = parseInt(req.body.temp);
+  const score = bmi+workout+yoga+heartbeat+bp+medication+covid+lungs+pulse+temp;
+  console.log(score);
 })
 
 let port = process.env.PORT;
