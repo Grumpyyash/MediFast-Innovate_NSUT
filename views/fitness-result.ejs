@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+<div class="fitness-div" style="text-align: center;">
+    <div class="container fitness-container">
+        <% if(score < 50){ %>
+          <h1 style="font-weight: 500; margin-bottom: 2rem; margin-top: 2rem;">It's unfortunate that your overall fitness score is mere <%= score %></h1>
+          <img src="https://image.shutterstock.com/z/stock-vector-scolding-businessman-illustration-set-boss-stress-nervous-worker-vector-drawing-hand-drawn-1680280180.jpg"></img>
+          <h2 style="font-weight: 400; margin-bottom: 2rem; margin-top: 2rem;">You Can Still improve :)</h2>
+          <a href="/"><button name="submit" class="btn btn-primary" style="margin-bottom: 2rem;">CHECKOUT The PLAN</button></a>
+         <% } else if(score < 75){ %>
+          <h1 style="font-weight: 500; margin-bottom: 2rem; margin-top: 2rem;">It's okay that your overall fitness score is as good as <%= score %></h1>
+          <img src="https://image.shutterstock.com/image-vector/illustration-kid-girl-sharing-giving-600w-1284458806.jpg"></img>
+          <h2 style="font-weight: 400; margin-bottom: 2rem; margin-top: 2rem;">But, You Can Still improve :)</h2>
+          <a href="/"><button name="submit" class="btn btn-primary" style="margin-bottom: 2rem;">CHECKOUT The PLAN</button></a>
+         <% } else { %>
+            <h1 style="font-weight: 500; margin-bottom: 2rem; margin-top: 2rem;">Oh, brilliant! Your fitness score is as good as <%= score %></h1>
+            <img src="https://image.shutterstock.com/image-vector/cute-celebration-decoration-card-people-600w-1390679087.jpg"></img>
+            <h2 style="font-weight: 400; margin-bottom: 2rem; margin-top: 2rem;">Keep up the good work :)</h2>
+            <a href="/"><button name="submit" class="btn btn-primary" style="margin-bottom: 2rem;">CHECKOUT The PLAN</button></a>
+         <% } %>
+         
+    </div>
+</div>
+
+<%- include('footer') %>

@@ -311,7 +311,12 @@ app.post("/fitness", function(req, res){
   const temp = parseInt(req.body.temp);
   const score = bmi+workout+yoga+heartbeat+bp+medication+covid+lungs+pulse+temp;
   console.log(score);
-})
+
+  res.render("fitness-result", {
+    score: score
+  })
+});
+
 
 let port = process.env.PORT;
 if(port == null || port == ""){
